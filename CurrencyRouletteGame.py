@@ -1,13 +1,13 @@
 from Live import welcome,load_game
 from random import randrange, random
 from currency_converter import CurrencyConverter
-
+from score import add_score
 def play(Game, Difficulty):
  while(True):
   if (Game == 3): # 3 is Roulette Game
      print(f'*** You are in Currency Roulette Game Game *** in level {Difficulty}\n')
      RandomNumber,GuessIntervalDown,GuessIntervalUp = get_money_interval(Difficulty)
-     get_guess_from_user(RandomNumber,GuessIntervalDown,GuessIntervalUp)
+     get_guess_from_user(RandomNumber,GuessIntervalDown,GuessIntervalUp,Difficulty)
 
      #get_guess_from_user()
 
@@ -21,7 +21,7 @@ def get_money_interval(Difficulty):
     print(RandomNumber,int(GuessIntervalDown),int(GuessIntervalUp))
     return (RandomNumber,int(GuessIntervalDown),int(GuessIntervalUp))
 
-def get_guess_from_user(RandomNumber,GuessIntervalDown,GuessIntervalUp):
+def get_guess_from_user(RandomNumber,GuessIntervalDown,GuessIntervalUp,Difficulty):
     while(True):
      UserGuessInput = (input(f'For {RandomNumber} in USD ,Please enter your guess how much is it in ILS  \n'))
      if not (UserGuessInput.isdigit()):
@@ -29,6 +29,7 @@ def get_guess_from_user(RandomNumber,GuessIntervalDown,GuessIntervalUp):
         continue
      elif (GuessIntervalDown <= int(UserGuessInput)<=GuessIntervalUp):
         print("Well Done")
+        add_score(Difficulty)
         return (True)
      else:
         print("Wrong guess")

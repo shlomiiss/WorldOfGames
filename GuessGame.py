@@ -28,6 +28,7 @@ def get_guess_from_user():
 def compare_results(SecretNumber, UserChooseInput):
      if int(SecretNumber) == int(UserChooseInput):
         print("Nice")
+        add_score(Difficulty)
         return(True)
      else:
         print("try again")

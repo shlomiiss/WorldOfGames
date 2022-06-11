@@ -49,6 +49,7 @@ def is_list_equal(RandomList, UserChooseList):
      print(UserChooseList)
      if (RanList==UserList):
         print("match")
+        add_score(Difficulty)
         return(True)
      else:
         print("try again")
