@@ -1,0 +1,14 @@
+version: "3.9"
+services:
+#  Rev-Proxy:
+#    build: nginx:latest
+#    container_name: nginx
+#    ports:
+#      - "80:80"
+
+  wog:
+    build: .
+    container_name: world_of_games
+    ports:
+         "8777:30000"
+    
