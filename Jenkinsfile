@@ -1,16 +1,17 @@
+// Declarative //
 pipeline {
-  agent any
+    agent any
     stages {
-      stage ("check docker env")
-       script{
-        steps {
-         sh '''
-           docker version
-           docker info
-           docker compose version
-           curl --version
-         '''
-           }
+        stage('Example') {
+            steps {
+                echo 'Hello World'
+            }
+        }
+    }
+    post { 
+        always { 
+            echo 'I will always say Hello again!'
         }
     }
 }
+// Script //
