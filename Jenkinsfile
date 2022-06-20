@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage("check Docker env") {
             steps {
-              sh '''
+              bat '''
                 docker version
                 docker info
                 docker compose version
