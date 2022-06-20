@@ -1,5 +1,3 @@
-#to
-#I should add env for Docker on the loca host
 pipeline {
   agent any
     stages {
@@ -13,5 +11,5 @@ pipeline {
            '''
            }
          }
-  }
+     }
 }
