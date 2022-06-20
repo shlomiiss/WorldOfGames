@@ -2,7 +2,8 @@ pipeline {
   agent any
     stages {
       stage ("check docker env")
-         steps {
+       script{
+        steps {
          sh '''
            docker version
            docker info
@@ -12,3 +13,4 @@ pipeline {
            }
         }
     }
+}
