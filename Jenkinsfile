@@ -13,7 +13,7 @@ pipeline {
         }
         stage("bulid"){
           steps {
-            bat "docker build -t test/WOG10 ." 
+            bat "docker build -t test/wog11 ."
       } 
     }
  } 
