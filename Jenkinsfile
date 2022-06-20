@@ -11,9 +11,9 @@ pipeline {
             '''
             }
         }
-    stage("bulid")
-      steps {
-        bat "docker build -t test/WOG10 ."
-      }
+        stage("bulid")
+          steps {
+            bat "docker build -t test/WOG10 ." 
+      } 
     }
 } 
