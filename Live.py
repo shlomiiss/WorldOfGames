@@ -4,8 +4,10 @@ import shutil
 columns = shutil.get_terminal_size().columns
 def welcome(name):
  #os.system('cls')
- print("KUKU")
- NameUserInput = str(input('enter your name\n'.center((columns))))
+ try:
+     NameUserInput = str(input('enter your name\n'.center((columns))))
+ except EOFError:
+   pass
  print(f"Hello \033[1m{NameUserInput}\033[0m and welcome to the World of Games (WoG).Here you can find many cool games to play".center(columns))
 
 def load_game():

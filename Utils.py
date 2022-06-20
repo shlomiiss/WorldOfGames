@@ -1,4 +1,4 @@
-
+import os
 #from Live
 SCORES_FILE_NAME = 'Scores.txt'
 

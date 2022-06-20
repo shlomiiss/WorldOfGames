@@ -5,6 +5,7 @@ import os
 from time import sleep
 MaxRandom = 101
 RandomList=[]
+from score import add_score
 
 
 def play(Game, Difficulty):
@@ -42,7 +43,7 @@ def get_list_from_user(Difficulty):
         print(f'The  numbers are {UserChooseList}')
         return (UserChooseList)
 
-def is_list_equal(RandomList, UserChooseList):
+def is_list_equal(RandomList, UserChooseList,Difficulty):
      UserList = set(map(int,UserChooseList))
      RanList = set(RandomList)
      print(RandomList)

@@ -1,4 +1,5 @@
-shutil
+#shutil
 CurrencyConverter
+selenium
 flask
 

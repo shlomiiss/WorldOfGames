@@ -1,6 +1,9 @@
 
 from Live import welcome,load_game
 from random import randrange, random
+from score import add_score
+
+
 def play(Game, Difficulty):
  while(True):
   if (Game == 2): # 2 is GuessGame
@@ -25,7 +28,7 @@ def get_guess_from_user():
     print("valid input are digits only. try again")
 
 
-def compare_results(SecretNumber, UserChooseInput):
+def compare_results(SecretNumber, UserChooseInput,Difficulty):
      if int(SecretNumber) == int(UserChooseInput):
         print("Nice")
         add_score(Difficulty)

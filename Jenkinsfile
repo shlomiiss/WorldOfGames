@@ -1,10 +1,16 @@
 pipeline {
-    agent any {
+  agent any
     stages {
-        stage("build") {
-            steps {
-                sh 'python --version'
-            }
+      stage ('check docker env')
+       steps {
+         sh '''
+           docker version
+           docker info
+           docker compose version
+           curl --version
+           '''
+           }
         }
     }
 }
+lllll

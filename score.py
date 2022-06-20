@@ -1,4 +1,5 @@
-import os
+import os#
+#from MainScores
 from Utils import SCORES_FILE_NAME
 def add_score(difficulty):
 
@@ -15,3 +16,4 @@ def add_score(difficulty):
         fwrite = open("Scores.txt", "w+")
         fwrite.write(str('0'))
         fwrite.close()
+
