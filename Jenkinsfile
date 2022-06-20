@@ -2,16 +2,14 @@
 pipeline {
     agent any
     stages {
-        stage('Example') {
+        stage('check Docker env') {
             steps {
-                echo 'Hello World'
+              sh '''
+                docker version
+                docker info
+                docker compose version
+            '''
             }
         }
     }
-    post { 
-        always { 
-            echo 'I will always say Hello again!'
-        }
-    }
-}
-// Script //
+} 
