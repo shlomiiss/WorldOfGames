@@ -13,7 +13,8 @@ pipeline {
         }
         stage("bulid"){
           steps {
-            bat "docker build -t test/wog11 ."
+            //bat "docker build -t test/wog11 ."
+            bat "docker compose up -d --no-start"
       } 
     }
  } 
