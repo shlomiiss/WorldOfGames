@@ -20,7 +20,7 @@ pipeline {
         stage("Start the Game Container"){
           steps {
             //bat "docker build -t test/wog11 ."
-            bat "docker compose up -d WogGame"
+            bat "docker compose up -d"
             bat "docker ps"
          }
         }
@@ -33,7 +33,8 @@ pipeline {
         stage("Final ") {
            steps {
             bat "docker compose down"
-            bat "docker compose push wog"
+            sleep(time:1,unit:"MINUTES")
+            bat "docker push 24912491/worldofgames-wog-1:3.0"
          }
         }
       }
