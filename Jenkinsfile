@@ -21,7 +21,20 @@ pipeline {
             //bat "docker build -t test/wog11 ."
             bat "docker compose up -d WogGame"
             bat "docker ps"
+       }
+         stage("Testing "){
+           steps {
+            //bat "docker build -t test/wog11 ."
+             bat "echo tests"
+           }
+        stage("Final "){
+           steps {
+            bat "docker compose down"
+            bat "docker compose push wog"
+         }
+        }
       }
-    }
- } 
+    } 
+  }
+ }
 }
