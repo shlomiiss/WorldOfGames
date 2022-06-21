@@ -11,11 +11,17 @@ pipeline {
             '''
             }
         }
-        stage("bulid"){
+        stage("bulid using Docker Compose"){
           steps {
             //bat "docker build -t test/wog11 ."
             bat "docker compose up -d --no-start"
       } 
+        stage("Start the Game Container"){
+          steps {
+            //bat "docker build -t test/wog11 ."
+            bat "docker compose up -d WogGame"
+            bat "docker ps"
+      }
     }
  } 
 }
