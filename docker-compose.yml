@@ -3,7 +3,7 @@ services:
   wog:
     build: .
     image: worldofgame1
-    container_name: WogGame
+    container_name: worldofgames-wog-1:latest
     ports:
        -  "8777:30000"
     

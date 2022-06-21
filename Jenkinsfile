@@ -14,7 +14,7 @@ pipeline {
         stage("bulid using Docker Compose") {
            steps {
             //bat "docker build -t test/wog11 ."
-            bat "docker compose up -d --no-start -t worldofgames-wog-1:latest"
+            bat "docker compose up -d --no-start"
          } 
         } 
         stage("Start the Game Container"){
