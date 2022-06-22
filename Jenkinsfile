@@ -34,7 +34,8 @@ pipeline {
            steps {
             bat "docker compose down"
             sleep(time:1,unit:"MINUTES")
-            bat "docker push 24912491/worldofgames-wog-1:latest"
+            bat docker compose push .
+            //bat "docker push 24912491/worldofgames-wog-1:latest"
          }
         }
       }
