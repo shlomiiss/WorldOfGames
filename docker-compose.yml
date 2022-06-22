@@ -6,4 +6,6 @@ services:
     container_name: worldofgames-wog-1
     ports:
        -  "8777:30000"
+    volumes:
+      - /Temp:/
     
