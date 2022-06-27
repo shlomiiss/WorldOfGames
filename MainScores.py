@@ -13,7 +13,7 @@ app = Flask(__name__,template_folder='templates')
 
 def index ():
     try:
-       f = open("Scores.txt", 'r')
+       f = open("/tmp/Scores.txt", 'r')
     except OSError:
         return render_template('error.html', ERROR=BAD_RETURN_CODE)
     with f:
