@@ -13,13 +13,15 @@ pipeline {
         }
         stage("bulid using Docker Compose") {
            steps {
-            //bat "docker build -t test/wog11 ."
-            bat "docker compose up -d --no-start"
+            //bat "docker build -t test/wog25 ."
+            //bat "docker compose up -d --no-start"
+              bat "docker compose -f docker-compose.yml up -d --no-start"
+
          } 
         } 
         stage("Start the Game Container"){
           steps {
-            //bat "docker build -t test/wog11 ."
+            //bat "docker build -t test/wog27 ."
             bat "docker compose up -d"
             bat "docker ps"
          }
@@ -27,6 +29,13 @@ pipeline {
          stage("Testing "){
            steps {
             //bat "docker build -t test/wog11 ."
+             //docker exec -it TheGame
+             //bat "python /tests/e2e.py
+             def x = bat "(returnStdout: true , script: 'python /tests/e2e.py').trim()"
+             script{
+                      if (something) {
+                            currentBuild.result = "FAILURE"
+                            sh "exit 1"
              bat "echo tests"
            }
          }

@@ -1,9 +1,9 @@
-import GuessGame
+import GuessGame,os
 import MemoryGame
 import CurrencyRouletteGame
 from Utils import screen_cleaner
 from Live import welcome,load_game
-from MainScores import app
+from MainScores import app,index
 import threading
 name = ''
 
@@ -16,6 +16,7 @@ def run_script():
     Thread.start()
     screen_cleaner()
 run_script()
+
 welcome(name)
 while True:
  GameUserLevelInput,GameUserInput = load_game()
