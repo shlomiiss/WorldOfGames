@@ -37,8 +37,10 @@ pipeline {
                             currentBuild.result = "FAILURE"
                             sh "exit 1"
              bat "echo tests"
+             }
+            }
            }
-         }
+         }  
         stage("Final ") {
            steps {
             bat "docker compose down"
@@ -51,5 +53,4 @@ pipeline {
          }
         }
        }
-     } 
-   }
+  
