@@ -15,7 +15,7 @@ pipeline {
            steps {
             //bat "docker build -t test/wog25 ."
             //bat "docker compose up -d --no-start"
-              bat "docker compose -f docker-compose.yml up -d --no-start"
+              bat "docker compose -f docker-compose_volume.yml up -d --no-start"
 
          } 
         } 
@@ -42,11 +42,14 @@ pipeline {
         stage("Final ") {
            steps {
             bat "docker compose down"
+            sleep(time:1,unit:"MINUTES")sleep(time:1,unit:"MINUTES")
+            bat "docker compose -f docker-compose_pro.yml up -d --no-start"
             sleep(time:1,unit:"MINUTES")
             bat docker compose push .
             //bat "docker push 24912491/worldofgames-wog-1:latest"
+          }
          }
         }
-      }
-    } 
-
+       }
+     } 
+   }
