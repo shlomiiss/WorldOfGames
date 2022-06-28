@@ -17,7 +17,7 @@ def test_score_service():
    #my_driver.get(mysite)
    #x = my_driver.find_element(By.XPATH,'<div id="score">1</div>')
    x = 777
-   print("success")
+   print('success')
    return False
 
 
