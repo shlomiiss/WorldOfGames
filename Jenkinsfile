@@ -26,7 +26,7 @@ pipeline {
             bat "docker ps"
          }
         }
-         stage("Testing "){
+         stage("Testing flask "){
            steps {
             //bat "docker build -t test/wog11 ."
              //docker exec -it TheGame
@@ -40,7 +40,7 @@ pipeline {
              }
             }
            }
-         }  
+         } 
         stage("Final ") {
            steps {
             bat "docker compose down"
@@ -52,4 +52,4 @@ pipeline {
           }
         }
        }
-     }
+      }
