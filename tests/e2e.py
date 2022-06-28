@@ -19,7 +19,7 @@ def test_score_service():
    x = 777
    print('success')
 
-   return False
+   return True
 
 
 
