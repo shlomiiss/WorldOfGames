@@ -6,7 +6,7 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.by import By
 from selenium import webdriver
 import time
-//my_driver = webdriver.Chrome('C:/Temp/chromedriver.exe')
+#my_driver = webdriver.Chrome('C:/Temp/chromedriver.exe')
 
 
 def main_function():
