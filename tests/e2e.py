@@ -6,6 +6,7 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.by import By
 from selenium import webdriver
 import time
+import sys
 #my_driver = webdriver.Chrome('C:/Temp/chromedriver.exe')
 
 
@@ -19,7 +20,7 @@ def test_score_service():
    x = 777
    print('success')
 
-   return True
+   return (sys.exit(1))
 
 
 
