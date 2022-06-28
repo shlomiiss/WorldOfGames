@@ -38,8 +38,8 @@ pipeline {
              bat "echo tests"
              }
             }
-           }
-         } 
+         // }
+         //} 
         stage("Final - Push image to GitHub ") {
            steps {
             bat "docker compose down"
@@ -50,5 +50,5 @@ pipeline {
             //bat "docker push 24912491/worldofgames-wog-1:latest"
           }
         }
-       }
-      }
+    }
+}    
