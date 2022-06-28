@@ -48,7 +48,7 @@ pipeline {
             //sleep(time:1,unit:"MINUTES")
             //bat "docker compose push ."
             //bat "docker push 24912491/worldofgames-wog-1:latest"
-          }
+           }
         }
     }
-}    
+}  
