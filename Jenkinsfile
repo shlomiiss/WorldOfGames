@@ -40,7 +40,7 @@ pipeline {
             }
            }
          } 
-        stage("Final ") {
+        stage("Final - Push image to GitHub ") {
            steps {
             bat "docker compose down"
             sleep(time:1,unit:"MINUTES")
