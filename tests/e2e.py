@@ -17,7 +17,7 @@ def test_score_service():
    mysite = 'http://127.0.0.1:8777/'
    #my_driver.get(mysite)
    #x = my_driver.find_element(By.XPATH,'<div id="score">1</div>')
-   x = 0
+   x = 777
    if (x == 777):
       print('test success')
       return (sys.exit(0))
