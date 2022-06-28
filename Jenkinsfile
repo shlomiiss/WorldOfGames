@@ -30,11 +30,11 @@ pipeline {
             //bat "docker build -t test/wog11 ."
              //docker exec -it TheGame
              //bat "python /tests/e2e.py
-             def x = bat "(returnStdout: true , script: 'python /tests/e2e.py').trim()"
-             script{
-                      if (something) {
-                            currentBuild.result = "FAILURE"
-                            sh "exit 1"
+             //def x = bat "(returnStdout: true , script: 'python /tests/e2e.py').trim()"
+             //script{
+               //       if (something) {
+                 //           currentBuild.result = "FAILURE"
+                   //         sh "exit 1"
              bat "echo tests"
              }
             }
@@ -44,9 +44,9 @@ pipeline {
            steps {
             bat "docker compose down"
             sleep(time:1,unit:"MINUTES")
-            bat "docker compose -f docker-compose_pro.yml up -d --no-start"
-            sleep(time:1,unit:"MINUTES")
-            bat docker compose push .
+            //bat "docker compose -f docker-compose_pro.yml up -d --no-start"
+            //sleep(time:1,unit:"MINUTES")
+            //bat "docker compose push ."
             //bat "docker push 24912491/worldofgames-wog-1:latest"
           }
         }
