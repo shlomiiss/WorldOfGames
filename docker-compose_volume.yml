@@ -1,20 +1,9 @@
-#version: "3.9"
-#services:
-#  wog:
-#    build: .
-#    image: worldofgames-wog-1:latest
-#    container_name: worldofgames-wog-1
-#    ports:
-#       -  "8777:30000"
-#    volumes:
-#      - c:/Temp:/app/tests
-#
 version: "3.9"
 services:
   wog:
     build: .
     image: test/wog43
-    container_name: TheGame
+    #container_name: TheGame
     ports:
        -  "8777:30000"
     volumes:
