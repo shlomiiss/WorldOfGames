@@ -38,8 +38,7 @@ pipeline {
               //bat "docker compose push ."
               bat  "docker login -u 24912491 -p cd53f383-b699-4a02-a75b-c5ef834225be"
               bat "docker image tag test/wog45 24912491/worldofgames-wog-1:latest"
-              bat "docker push 24912491/worldofgames-wog-1:
-
+              bat "docker push 24912491/worldofgames-wog-1:latest"
             }
            }
           }
