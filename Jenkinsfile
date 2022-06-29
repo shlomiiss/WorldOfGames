@@ -31,7 +31,7 @@ pipeline {
            }
          stage("Final - Push image to GitHub ") {
            steps {
-              bat "docker compose -f docker-compose_prod.yml down -d
+              bat "docker compose -f docker-compose_prod.yml down -d"
               sleep(time:1,unit:"MINUTES")
               bat "docker compose -f docker-compose_prod.yml up -d --no-start"
               sleep(time:1,unit:"MINUTES")
