@@ -32,9 +32,9 @@ pipeline {
          stage("Final - Push final image to GitHub ") {
            steps {
               bat "docker compose -f docker-compose_prod.yml down"
-              sleep(time:30,unit:"SECONES")
+              //sleep(time:30,unit:"SECONES")
               bat "docker compose -f docker-compose_prod.yml up -d --no-start"
-              sleep(time:30,unit:"SECONES")
+              //sleep(time:30,unit:"SECONES")
               //bat "docker compose push ."
               bat  "docker login -u 24912491 -p cd53f383-b699-4a02-a75b-c5ef834225be"
               bat "docker image tag wog46 24912491/worldofgames-wog-1:latest"
