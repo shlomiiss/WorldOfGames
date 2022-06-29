@@ -7,23 +7,21 @@ from selenium.webdriver.common.by import By
 from selenium import webdriver
 import time
 import sys
-#my_driver = webdriver.Chrome('C:/Temp/chromedriver.exe')
-
+my_driver = webdriver.Chrome('C:/Temp/chromedriver.exe')
+mysite = 'http://127.0.0.1:8777/'
 
 def main_function():
-    test_score_service()
-def test_score_service():
-   time.sleep(5)
-   mysite = 'http://127.0.0.1:8777/'
-   #my_driver.get(mysite)
-   #x = my_driver.find_element(By.XPATH,'<div id="score">1</div>')
-   x = 777
+    test_score_service(mysite)
+def test_score_service(url):
+   my_driver.get(mysite)
+   x = int(my_driver.find_element(By.XPATH,'//*[@id="score"]').text)
+   print(x)
    if (x == 777):
-      print('test success')
-      return (sys.exit(0))
+       print('test success')
+       return (sys.exit(0))
    else:
-      print("test failure")
-      return (sys.exit(1))
+       print("test failure")
+       return (sys.exit(-1))
 
 
 main_function()
