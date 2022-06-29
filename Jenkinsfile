@@ -19,7 +19,7 @@ pipeline {
            stage("Testing flask "){
            steps {
             script{
-             bat "docker exec -it TheGame"
+             //bat "docker exec -it TheGame"
              bat "python /tests/e2e.py"
              def s1 = bat(script:  "python ${WORKSPACE}/tests/e2e.py",returnStatus  : true)
               if (s1 != 0){
