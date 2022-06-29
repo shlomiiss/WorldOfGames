@@ -8,7 +8,7 @@ services:
        -  "8777:30000"
     volumes:
       - type: bind
-        source: c:/Temp
+        source: c:/Temp1
         target: /tmp
         read_only: no
 
