@@ -23,20 +23,20 @@ pipeline {
              //bat "python /tests/e2e.py"
              def s1 = bat(script:  "python ${WORKSPACE}/tests/e2e.py",returnStatus  : true)
               if (s1 != 0){
-                currentBuild.result = "FAILURE"
-                println "The test failed"
+                currentBuild.result = "ABORTED"
+                error ('The test failed. Stopping the pipeline')
                }
               }
             }
            }
          stage("Final - Push image to GitHub ") {
            steps {
-              bat "docker compose down"
+              bat "docker compose -f docker-compose_prod.yml down -d
               sleep(time:1,unit:"MINUTES")
               bat "docker compose -f docker-compose_prod.yml up -d --no-start"
               sleep(time:1,unit:"MINUTES")
               //bat "docker compose push ."
-              bat "docker push 24912491/worldofgames-wog-1:latest"
+              bat "docker push 24912491/wog43:latest"
             }
            }
           }
