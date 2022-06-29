@@ -36,7 +36,10 @@ pipeline {
               bat "docker compose -f docker-compose_prod.yml up -d --no-start"
               sleep(time:1,unit:"MINUTES")
               //bat "docker compose push ."
-              bat "docker push 24912491/worldofgames-wog-1/wog44"
+              bat  "docker login -u 24912491 -p cd53f383-b699-4a02-a75b-c5ef834225be"
+              bat "docker image tag test/wog45 24912491/worldofgames-wog-1:latest"
+              bat "docker push 24912491/worldofgames-wog-1:
+
             }
            }
           }
