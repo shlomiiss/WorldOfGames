@@ -13,7 +13,7 @@ pipeline {
              //bat "docker build -t test/wog27 ."
              //bat "docker compose up -d"
              bat "docker compose -f docker-compose_volume.yml up -d"
-             bat "docker ps"
+             //bat "docker ps"
           }
          }
            stage("Testing flask "){
