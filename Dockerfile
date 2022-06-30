@@ -8,5 +8,4 @@ RUN python3 -m pip install -r requirements.txt
 COPY *.py /app
 COPY Scores.txt /tmp
 COPY /templates  /app/templates
-#ENTRYPOINT ["tail", "-f", "/dev/null"]
 ENTRYPOINT ["python", "MainGame.py"]

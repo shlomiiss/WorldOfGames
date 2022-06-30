@@ -3,7 +3,6 @@ services:
   wog:
     build: .
     image: wog46
-    #container_name: TheGame
     ports:
        -  "8777:30000"
     volumes:
